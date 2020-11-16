@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>GITHUB建立BLOG完整记录 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="GITHUB建立BLOG完整记录 QQ群：397745473">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GITHUB建立BLOG完整记录">
+<meta property="og:url" content="http://example.com/2020/11/16/133_GITHUB%E5%BB%BA%E7%AB%8BBLOG%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="GITHUB建立BLOG完整记录 QQ群：397745473">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-15T19:03:03.000Z">
+<meta property="article:modified_time" content="2020-11-16T05:50:04.000Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-133_GITHUB建立BLOG完整记录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/16/133_GITHUB%E5%BB%BA%E7%AB%8BBLOG%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/" class="article-date">
+  <time datetime="2020-11-15T19:03:03.000Z" itemprop="datePublished">2020-11-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      GITHUB建立BLOG完整记录
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>GITHUB建立BLOG完整记录</p>
+<p>QQ群：397745473</p>
+<a id="more"></a> 
+
+
+
+<h1 id="建立BLOG专属容器"><a href="#建立BLOG专属容器" class="headerlink" title="建立BLOG专属容器"></a>建立BLOG专属容器</h1><p>建立多个Blog 可以使用docker单独管理.十分方便.</p>
+<p>命令如下:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">curl -sSL https://get.daocloud.io/docker | sh</span><br><span class="line">service docker start</span><br><span class="line">docker pull ubuntu</span><br><span class="line"></span><br><span class="line">docker run -p 8081:80 -p 8022:22 -itd --name vsyourBlog ubuntu /bin/bash</span><br><span class="line"><span class="comment">#进入容器 patch</span></span><br><span class="line">docker <span class="built_in">exec</span> -it vsyourBlog /bin/bash</span><br><span class="line"></span><br><span class="line">apt-get -y  update &amp;&amp; apt-get -y upgrade</span><br><span class="line">apt-get -y install git net-tools openssh-server vim</span><br><span class="line">apt-get install language-pack-zh-hans</span><br><span class="line"></span><br><span class="line">提示: </span><br><span class="line"> 1. Africa  2. America  3. Antarctica  4. Australia  5. Arctic  6. Asia  7. Atlantic  8. Europe  9. Indian  10. Pacific  11. SystemV  12. US  13. Etc</span><br><span class="line">选择: 6</span><br><span class="line">Please select the city or region corresponding to your time zone.</span><br><span class="line">再选: 70 shanghi</span><br><span class="line"></span><br><span class="line">更改/etc/ssh/sshd_config 配置</span><br><span class="line">vim /etc/ssh/sshd_config </span><br><span class="line"></span><br><span class="line">::去掉以下两项的注释</span><br><span class="line">PermitRootLogin yes </span><br><span class="line">PasswordAuthentication yes </span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启服务</span></span><br><span class="line">/etc/init.d/ssh restart</span><br><span class="line"></span><br><span class="line">update-rc.d ssh defaults</span><br><span class="line">passwd root</span><br><span class="line"></span><br><span class="line">现在可以直接使用 Bitvise SSH Client 连接这个docker了</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="开机自启docker后-开启或关闭自启容器"><a href="#开机自启docker后-开启或关闭自启容器" class="headerlink" title="开机自启docker后 开启或关闭自启容器"></a>开机自启docker后 开启或关闭自启容器</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">开机自启docker后 开启或关闭自启容器</span><br><span class="line">docker run –restart&#x3D;always</span><br><span class="line"></span><br><span class="line">当然如果你的容器已经启动,可以通过update命令进行修改.</span><br><span class="line">命令如下：</span><br><span class="line">docker update --restart&#x3D;always &lt;CONTAINER ID&gt;</span><br><span class="line">docker update --restart&#x3D;always 995f4f428c14</span><br><span class="line"></span><br><span class="line">如果你想取消掉 命令如下:</span><br><span class="line">ocker update --restart&#x3D;no &lt;CONTAINER ID&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="建立Blog"><a href="#建立Blog" class="headerlink" title="建立Blog"></a>建立Blog</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">建立参考: </span><br><span class="line">https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;35668237</span><br><span class="line">https:&#x2F;&#x2F;godweiyang.com&#x2F;2018&#x2F;04&#x2F;13&#x2F;hexo-blog&#x2F;</span><br><span class="line"></span><br><span class="line">apt install nodejs</span><br><span class="line">apt install npm</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">npm i hexo-cli -g</span><br><span class="line">npm i hexo-deployer-git</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line">mkdir &#x2F;blog;cd &#x2F;blog&#x2F;</span><br><span class="line">输入hexo init初始化文件夹，接着输入npm install安装必备的组件。</span><br><span class="line"></span><br><span class="line">git config --global user.name &quot;vsyour&quot;</span><br><span class="line">git config --global user.email &quot;vsyour@qq.com&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;vsyour@qq.com&quot;</span><br><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cd &#x2F;blog &amp;&amp; hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="加ssl证书"><a href="#加ssl证书" class="headerlink" title="加ssl证书"></a>加ssl证书</h1><p>域名A记录解析到:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">185.199.108.153</span><br><span class="line">185.199.109.153</span><br><span class="line">185.199.110.153</span><br><span class="line">185.199.111.153</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="ubuntu中文支持-及中文乱码问题"><a href="#ubuntu中文支持-及中文乱码问题" class="headerlink" title="ubuntu中文支持,及中文乱码问题"></a>ubuntu中文支持,及中文乱码问题</h1><p>首先，安装中文支持包language-pack-zh-hans：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install language-pack-zh-hans</span><br></pre></td></tr></table></figure>
+
+<p>然后，修改/etc/environment（在文件的末尾追加）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LANG&#x3D;&quot;zh_CN.UTF-8&quot;</span><br><span class="line">LANGUAGE&#x3D;&quot;zh_CN:zh:en_US:en&quot;</span><br></pre></td></tr></table></figure>
+
+<p>再修改/var/lib/locales/supported.d/local(没有这个文件就新建，同样在末尾追加)：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">en_US.UTF-8 UTF-8</span><br><span class="line">zh_CN.UTF-8 UTF-8</span><br><span class="line">zh_CN.GBK GBK</span><br><span class="line">zh_CN GB2312</span><br></pre></td></tr></table></figure>
+
+<p>最后，执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo locale-gen</span><br></pre></td></tr></table></figure>
+
+<p>对于中文乱码是空格的情况，安装中文字体解决。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>QQ群：397745473</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/16/133_GITHUB%E5%BB%BA%E7%AB%8BBLOG%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/" data-id="ckhk4thz60001kzn11b0n2vj5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 10px;">网络安全</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/11/16/133_GITHUB%E5%BB%BA%E7%AB%8BBLOG%E5%AE%8C%E6%95%B4%E8%AE%B0%E5%BD%95/">GITHUB建立BLOG完整记录</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
